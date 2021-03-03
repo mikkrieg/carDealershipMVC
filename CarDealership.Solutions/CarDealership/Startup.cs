@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 
 namespace CarDealership
 {
@@ -26,6 +27,8 @@ namespace CarDealership
       public void Configure(IApplicationBuilder app)
       {
         app.UseRouting();
+        app.UseDeveloperExceptionPage();
+        app.UseStaticFiles();
 
         app.UseEndpoints(routes =>
         {

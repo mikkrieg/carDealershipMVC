@@ -11,24 +11,22 @@ namespace CarDealership.Tests
   {
     public void Dispose()
     {
-      Car.ClearAll();
+        Car.ClearAll();
     }
 
     [TestMethod]
     public void CarConstructor_CreatesInstanceOfCar_Car()
     {
-      Car newCar = new Car();
-      Assert.AreEqual(newCar.GetType(), typeof(Car));
+        Car newCar = new Car();
+        Assert.AreEqual(newCar.GetType(), typeof(Car));
     }
 
     [TestMethod]
     public void GetAll_ReturnsEmptyList_CarList()
     {
-      List<Car> newList = new List<Car> {};
-
-      List<Car> result = Car.GetAll();
-
-      CollectionAssert.AreEqual(newList, result);
+        List<Car> newList = new List<Car> {};
+        List<Car> result = Car.GetAll();
+        CollectionAssert.AreEqual(newList, result);
     }
 
     [TestMethod]

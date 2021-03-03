@@ -1,0 +1,18 @@
+#submit, #sell, #start {
+    display: block;
+    margin: auto;
+    padding: 10px 35px;
+}
+
+body {
+    background-color: #97ace6;
+}
+
+.card-img-top {
+    width: auto !important;
+    height: 200px;
+}
+
+.card-title {
+    overflow:hidden;
+}

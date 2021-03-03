@@ -11,8 +11,9 @@ namespace CarDealership.Models
     public string model { get; set; }
     public string type { get; set; }
     public int price { get; set; }
-    public int year { get; set; }
+    public string year { get; set; }
     public int mpg { get; set; }
+    public string condition { get; set; }
 
     public Car()
     {

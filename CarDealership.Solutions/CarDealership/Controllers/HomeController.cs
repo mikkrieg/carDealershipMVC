@@ -10,6 +10,5 @@ namespace CarDealership.Controllers
             return View();
         }
 
-
     }
 }

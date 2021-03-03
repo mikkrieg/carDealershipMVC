@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Car Dealership</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="~/css/styles.css"> 
+  </head>
+  <body>
+    <div class="container">
+    <h1 class="text-center mt-3">Add a car</h1>
+      <div class="row">
+        <div class="col-6 offset-3">
+          <form action="/cars" method="post" class="mt-5">
+
+            <label for="make">Select Make</label>
+            <select id="make" name="make" class="form-control">
+                <option value="unknown">unspecified</option>
+                <option value="chevrolet">chevrolet</option>
+                <option value="subaru">subaru</option>
+                <option value="honda">honda</option>
+                <option value="porsche">porsche</option>
+                <option value="mercedes">mercedes</option>
+                <option value="ford">ford</option>
+            </select>
+
+            <label for="model" class="mt-2">Enter Model</label>
+            <input id="model" name="model" type="text"  class="form-control" required>
+
+            <label for="type">Select Type</label>
+            <select id="type" name="type" class="form-control">
+                <option value="unknown">unknown</option>
+                <option value="sedan">sedan</option>
+                <option value="suv">suv</option>
+                <option value="convertible">convertible</option>
+                <option value="coup">coup</option>
+                <option value="minivan">minivan</option>
+                <option value="truck">truck</option>
+                <option value="hatchback">hatchback</option>
+                <option value="station">station wagon</option>
+            </select>
+
+            <label for="price" class="mt-2">Enter Selling Price</label>
+            <input id="price" name="price" type="num" class="form-control" required>
+
+            <label for="year" class="mt-2">Enter Year</label>
+            <input id="year" name="year" type="text" class="form-control">
+
+            <label for="mpg" class="mt-2">Enter Mileage</label>
+            <input id="mpg" name="mpg" type="num" class="form-control">
+
+            <label for="condition" class="mt-2">Select Condition</label>
+            <select id="condition" name="condition" class="form-control">
+                <option value="unknown"></option>
+                <option value="new">new</option>
+                <option value="good">good</option>
+                <option value="used">used</option>
+                <option value="poor">poor</option>
+                <option value="salvage">salvage</option>
+            </select>
+
+
+            <button type="submit" class="btn btn-success mt-3" id="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+		</div>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+@using CarDealership.Models;
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Car Dealership</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="~/css/styles.css">
+  </head>
+  <body>
+    <div class="container">
+        <h1 class="text-center">Shop Our Cars</h1>
+
+        @if (Model.Count == 0)
+        {
+          <div class="row">
+            <div class="col-8 offset-2">
+              <p>There are no items in the list.</p>
+            </div>
+          </div>
+        } 
+
+        @* logic for adding rows and cols for cars *@
+        <div class="row">
+            @foreach(Car car in Model)
+            {
+                <div class="col-4">
+                    <div class="card mt-3">
+                        <div class="card-title">
+                            @if(car.type == "sedan")
+                                {
+                                  <img class="card-img-top" src="~/img/sedan.png" alt="A sedan">
+                                }
+                            @if(car.type == "suv")
+                                {
+                                  <img class="card-img-top" src="~/img/suv.png" alt="A suv">
+                                }
+                            @if(car.type == "convertible")
+                                {
+                                  <img class="card-img-top" src="~/img/convertible.png" alt="A convertible">
+                                }
+                            @if(car.type == "coup")
+                                {
+                                  <img class="card-img-top" src="~/img/coup.png" alt="A coup">
+                                }
+                            @if(car.type == "minivan")
+                                {
+                                  <img class="card-img-top" src="~/img/minivan.png" alt="A minivan">
+                                }
+                            @if(car.type == "truck")
+                                {
+                                  <img class="card-img-top" src="~/img/truck.png" alt="A truck">
+                                }
+                            @if(car.type == "hatchback")
+                                {
+                                  <img class="card-img-top" src="~/img/hatchback.png" alt="A hatchback">
+                                }
+                            @if(car.type == "station")
+                                {
+                                  <img class="card-img-top" src="~/img/stationwagon.png" alt="A station wagon">
+                                }
+                            <div class="card-body">
+                                <div class="card-text">
+                                    <ul>
+                                        <li>Make: @car.make</li>
+                                        <li>Model: @car.model</li>
+                                        <li>Type: @car.type</li>
+                                        <li>Year: @car.year</li>
+                                        <li>Price: $@car.price</li>
+                                        <li>MPG: @car.mpg mpg</li>
+                                        <li>Condition: @car.condition</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="row">
+            <div class="col-8 offset-2">
+                <a href="/cars/newcar"><button class="btn btn-primary" id="sell">Sell your Car!</button></a>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
